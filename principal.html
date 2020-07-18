@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urmendiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        *:focus {
+            outline: none;
+        }
+        body {
+            background-image: radial-gradient( circle farthest-corner at 11.7% 80.6%,  rgba(249,185,255,1) 0%, rgba(177,172,255,1) 49.3%, rgba(98,203,255,1) 89% );
+            height: 100vh;
+        }
+        .header {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            display:flex;
+            justify-content: space-between;
+        }
+        .header__logo {
+            text-align: center;
+            width: 200px;
+            height: 60px;
+        }
+        h1 {
+            color: white;
+            font-family: 'Monoton', cursive;
+            font-size: xx-large;
+            
+        }
+        .header__menu {
+            width: 150px;
+            height: 60px;
+        
+        }
+        .header__menu--profile {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .header__menu--profile p{
+            color: white;
+            font-size: 20px;
+            height: 28px;
+            
+        }
+        .header__menu ul {
+            display: none;
+            list-style: none;
+            padding: 0;
+            position: absolute;
+            width: 150px;
+            text-align:right;
+        }
+        .header__menu:hover ul, ul:hover {
+            display: block;
+        }
+        .header__menu li {
+            margin: 10px 0px;
+        }
+        .header__menu li a {
+            color: white;
+            text-decoration: none;        }
+        .header__menu li a:hover {
+            text-decoration: underline;
+        }
+        .main {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main__title {
+            color: white;
+            font-size: 30px;       
+        }
+        .input {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 25px;
+            font-size: 15px;
+            height: 50px;
+            padding: 0 20px;
+            width: 70%
+            
+        }
+        ::placeholder {
+            color:white
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1>Urmendiz</h1>
+        </div>
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="https://img.icons8.com/color/60/000000/user-male-circle.png" alt="Icono de perfil"/>
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar sesión</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <section class="main">
+        <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+        <input class="input" type="text" placeholder="Buscar...">
+    </section>
+</body>
+</html>
