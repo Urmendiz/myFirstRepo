@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+}
+.header__logo {
+    text-align: center;
+    width: 200px;
+    height: 60px;
+}
+h1 {
+    color: white;
+    font-family: 'Monoton', cursive;
+    font-size: xx-large;
+}

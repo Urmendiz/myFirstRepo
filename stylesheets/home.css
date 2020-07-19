@@ -1,0 +1,154 @@
+body {
+  background-image: radial-gradient(circle farthest-corner at 11.7% 80.6%, #f9b9ff 0%, #b1acff 49.3%, #62cbff 89%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu {
+  width: 150px;
+  height: 60px;
+}
+
+.header__menu--profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header__menu--profile p {
+  color: white;
+  font-size: 20px;
+  height: 28px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 150px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__title {
+  color: white;
+  font-size: 30px;
+}
+
+.categories__title {
+  color: white;
+  padding: 0 30px;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 25px;
+  font-size: 15px;
+  height: 50px;
+  padding: 0 20px;
+  width: 70%;
+  color: white;
+}
+
+.carrousel {
+  width: 100%;
+  overflow: scroll;
+  padding: 30px;
+  position: relative;
+}
+
+.carrousel__container {
+  white-space: nowrap;
+  margin: 57px 0;
+  padding-bottom: 10px;
+}
+
+.carrousel-item {
+  background-color: seagreen;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carrousel-item:hover ~ .carrousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carrousel__container:hover .carrousel-item {
+  opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carrousel-item__img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.carrousel-item__details {
+  background: linear-gradient(to top, rbga(0, 0, 0, 0, 9) 0%, rgba(0, 0, 0, 0) 100%);
+  font-size: 10px;
+  opacity: 0;
+  transition: 250ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carrousel-item:hover .carrousel-item__details {
+  opacity: 1;
+}
+
+::placeholder {
+  color: white;
+}
+
+/*# sourceMappingURL=home.css.map */
