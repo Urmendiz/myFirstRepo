@@ -86,6 +86,13 @@
             color: white;
             font-size: 30px;       
         }
+        .categories__title {
+            color: white;
+            padding:0 30px;
+            font-size: 20px;
+            position: absolute;
+            width: 100%;
+        }
         .input {
             background-color: rgba(255, 255, 255, 0.2);
             border: 2px solid white;
@@ -94,7 +101,60 @@
             height: 50px;
             padding: 0 20px;
             width: 70%
-            
+        }
+        .carrousel {
+            width: 100%;
+            overflow: scroll;
+            padding: 30px;
+            position: relative;
+        }
+        .carrousel__container {
+            white-space: nowrap;
+            margin: 57px 0;
+            padding-bottom: 10px;
+        }
+        .carrousel-item {
+            background-color: seagreen;
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms;
+            transform-origin: center left;
+            position: relative;
+        }
+        .carrousel-item:hover ~ .carrousel-item {
+            transform: translate3d(100px, 0, 0)
+        }
+        .carrousel__container:hover .carrousel-item {
+            opacity: 0.3;
+        }
+        .carrousel__container:hover .carrousel-item:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+        .carrousel-item__img {
+            height: 250px;
+            width: 200px;
+            object-fit: cover;
+        }
+        .carrousel-item__details {
+            background: linear-gradient(to top, rbga(0, 0, 0, 0,9 ) 0%, rgba(0, 0, 0, 0) 100%);
+            font-size: 10px;
+            opacity: 0;
+            transition: 250ms opacity;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .carrousel-item:hover .carrousel-item__details {
+            opacity: 1;
         }
         ::placeholder {
             color:white
@@ -114,13 +174,119 @@
             <ul>
                 <li><a href="/">Cuenta</a></li>
                 <li><a href="/">Cerrar sesión</a></li>
-
             </ul>
         </div>
     </header>
+
     <section class="main">
         <h2 class="main__title">¿Qué quieres ver hoy?</h2>
         <input class="input" type="text" placeholder="Buscar...">
+    </section>
+
+    <h2 class="categories__title">Matches:</h2>
+
+    <section class="carrousel">
+        <div class="carrousel__container">
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/74674423_3024541620907229_5264190055764721664_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeGqCpas-66FjwfammkEL_mv_eafDvlqPS395p8O-Wo9LQd44As-sCf3YxcBahhDlQplECwjav_JE9EgsDRFRmiQ&_nc_ohc=J-lbgGYY6GYAX_RYfyr&_nc_ht=scontent.fclo9-1.fna&oh=30cd013c615bc42bf7fe1d3be8842dfd&oe=5F398528" alt="Portada">
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.15752-9/110317042_738447676910704_6149447222908435637_n.jpg?_nc_cat=103&_nc_sid=b96e70&_nc_eui2=AeGp6T7kUem5lDdnQyL8RD-vHL7nDQA5MjgcvucNADkyOJLyR0dkCVyGIXRj3X1FCquLRYmbZZRYwoZTNTjQkaV_&_nc_ohc=w2oc_S5U16IAX90EkKz&_nc_ht=scontent.fclo9-1.fna&oh=31f36035d1c0c1900f887160e744b4f2&oe=5F3950BC" alt="Portada">
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.15752-9/109980172_332703484789727_4230451536306116407_n.jpg?_nc_cat=103&_nc_sid=b96e70&_nc_eui2=AeGo_ZvXciM3R8ZDWRwPk4mfBKxnpXUOxeQErGeldQ7F5IdkK9HkaGgAKj19JDu-TNUEJjL4s2yjYgVjG-6AG_sF&_nc_ohc=IpDJvr24bRAAX8WX-N6&_nc_ht=scontent.fclo9-1.fna&oh=b3343faafc6bf14c4151abde3c18e74f&oe=5F38A02B" alt="Portada">
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/57433559_812792492455049_1410539621615403008_n.jpg?_nc_cat=104&_nc_sid=8bfeb9&_nc_eui2=AeH_xjAzsM8v8EzpdXtAv55cQL0v2BrY4DhAvS_YGtjgOB_WVUTFi5d9SjR4_JJosNe7__DrRAOWZX2PV-AyG3kn&_nc_ohc=BEuekgB5XyQAX88DVvy&_nc_ht=scontent.fclo9-1.fna&oh=fd84b7cce622a7c99d68b34805ee2bd7&oe=5F3A061B" alt="Portada">
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/96129000_948421218923798_1928438563557343232_n.jpg?_nc_cat=106&_nc_sid=8bfeb9&_nc_eui2=AeHdCnWqflcWJuvAVMZcp_HV-R7xP7HgR9j5HvE_seBH2E0dU5uoItX5YpTu0JGp4LtBiJvs44AoWjTQh6WuThXn&_nc_ohc=jo4qy7m4rI8AX_VVMDH&_nc_ht=scontent.fclo9-1.fna&oh=94d030b57474ee7aeaaea98326085594&oe=5F3922C9" alt="Portada"/>
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/94144052_122828939374652_2347076189903912960_n.jpg?_nc_cat=110&_nc_sid=8bfeb9&_nc_eui2=AeH8MbEw0sQk7y-JYf_tBSH1p_ZiZqpan8Sn9mJmqlqfxO0P5mTpUBxZDC34Cm8-MWcod8d3dFJKcyEp0rhcUxEW&_nc_ohc=s9izSwn99t0AX9M24hY&_nc_ht=scontent.fclo9-1.fna&oh=dbb7ff3423698907283f0ceb4baa78b1&oe=5F3780D7" alt="Portada"/>
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-0/p526x296/109699054_603630760576813_8485785720881572181_o.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeG7Z5CF6oZvs6paB6vXRKjYmqsqCxR3zJKaqyoLFHfMkgwijkqBKylXNyFChjIV-FaBc5gnpeKDgWbhqrm15Tdr&_nc_ohc=wzBLEsGoHP4AX9T_IZf&_nc_ht=scontent.fclo9-1.fna&_nc_tp=6&oh=b0aa41bc109d541b2698f997d75b054f&oe=5F378AB2" alt="Portada"/>
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/109462480_2720421161566945_7579944390864733960_o.jpg?_nc_cat=111&_nc_sid=8bfeb9&_nc_eui2=AeFOT-8wsI0woeT1rc2ClT9RMcJ1JOdmnnExwnUk52aecbkA7KceqqQMcabIqfaE2nhJeNagX3v5XxNl9zRgr5_s&_nc_ohc=NTXbH8EtrCUAX9tP42g&_nc_ht=scontent.fclo9-1.fna&oh=9b132b6961e36e220d266d7ecd15f666&oe=5F3723B7" alt="Portada"/>
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                <img class="carrousel-item__img" src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.0-9/103440869_1113031742400591_5270217591952788298_n.jpg?_nc_cat=100&_nc_sid=174925&_nc_eui2=AeHqUtHGK1su9kZuKGkwqqx2m-UNxv4H-wyb5Q3G_gf7DCSjQFmskQmFu0zpCjI_iIo28J-JJi7QIvrpHxXbsMyE&_nc_ohc=Bm_RcSKlBFEAX_jVFKR&_nc_ht=scontent.fclo9-1.fna&oh=358d701c729cbf4e1665908bf84e3e07&oe=5F39DA77" alt="Portada"/>
+                <div class="carrousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/like.png" alt="Me gusta"/>
+                        <img src="https://img.icons8.com/ultraviolet/50/000000/add-user-male.png" alt="Añadir"/>
+                    </div>
+                    <p class="carrousel-item__details--title">Nombre</p>
+                    <p class="carrousel-item__details--subtitle">Descripción</p>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
