@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urmendiz | Error 404 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        body {
+            background-image: linear-gradient( 109.1deg,  rgba(181,73,91,1) 7.1%, rgba(225,107,140,1) 86.4% ); 
+            height: 100vh;
+
+        }
+        header {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+        }
+        .header__logo {
+            text-align: center;
+            width: 200px;
+            height: 60px;
+        }
+        h1 {
+            color: white;
+            font-family: 'Monoton', cursive;
+            font-size: xx-large;
+        }
+        h2 {
+            color: white;
+        }
+        .container--error {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            height: 640px;
+        }
+        .animated {
+            animation-duration: 2.5s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+        .pulse {
+            animation-name: pulse;
+            animation-duration: 1s;
+        }
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.1);}
+            100% {transform: scale(1);}
+            }
+        .footer {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            justify-content: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1>Urmendiz</h1>
+        </div>
+    </header>
+
+    <section class="container--error">
+        <img class="container--error__img pulse animated" src="assets/404.png" alt="Error 404">
+        <h2 class="">Página no encontrada</h2>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaracion de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
